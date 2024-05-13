@@ -1,0 +1,294 @@
+2024-04-15 01:48:41,002 ERROR [io.undertow.request] (default task-1) UT005023: Exception handling request to /SampleWebApp1/welcome.jsp: org.apache.jasper.JasperException: JBWEB004062: Unable to compile class for JSP: 
+
+JBWEB004060: An error occurred at line: 39 in the jsp file: /welcome.jsp
+System cannot be resolved
+36:             Date Time;
+37:             String Dtime;
+38:             hostName = InetAddress.getLocalHost().getHostName()+" with IP="+InetAddress.getLocalHost().getHostAddress()+" ";
+39:             serverName = System.getProperty("weblogic.Name");
+40:             Time = new Date();
+41:             Dtime = Time.toString();
+42:             %>
+
+
+Stacktrace:
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:95)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:198)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:455)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.Compiler.compile(Compiler.java:359)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:652)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:358)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:403)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.servlet.JspServlet.service(JspServlet.java:347)
+	at javax.servlet.api@2.0.0.Final-redhat-00001//javax.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//io.undertow.jsp.JspFileHandler.handleRequest(JspFileHandler.java:32)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:251)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.dispatchToPath(ServletInitialHandler.java:186)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.spec.RequestDispatcherImpl.forwardImpl(RequestDispatcherImpl.java:227)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.spec.RequestDispatcherImpl.forwardImplSetup(RequestDispatcherImpl.java:149)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.spec.RequestDispatcherImpl.forward(RequestDispatcherImpl.java:111)
+	at deployment.SampleWebApp1.war//com.middlewareinventory.SnoopServlet.processRequest(SnoopServlet.java:41)
+	at deployment.SampleWebApp1.war//com.middlewareinventory.SnoopServlet.doGet(SnoopServlet.java:63)
+	at javax.servlet.api@2.0.0.Final-redhat-00001//javax.servlet.http.HttpServlet.service(HttpServlet.java:503)
+	at javax.servlet.api@2.0.0.Final-redhat-00001//javax.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.security.SecurityContextAssociationHandler.handleRequest(SecurityContextAssociationHandler.java:78)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.security.handlers.NotificationReceiverHandler.handleRequest(NotificationReceiverHandler.java:50)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:68)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:269)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:78)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:133)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:130)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.security.SecurityContextThreadSetupAction.lambda$create$0(SecurityContextThreadSetupAction.java:105)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1530)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1530)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1530)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1530)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:249)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:78)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:99)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.Connectors.executeRootHandler(Connectors.java:387)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:841)
+	at org.jboss.threads@2.4.0.Final-redhat-00001//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final-redhat-00001//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final-redhat-00001//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final-redhat-00001//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at org.jboss.xnio@3.8.4.Final-redhat-00001//org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1280)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+2024-04-15 01:48:47,347 ERROR [io.undertow.request] (default task-1) UT005023: Exception handling request to /SampleWebApp1/welcome.jsp: org.apache.jasper.JasperException: JBWEB004062: Unable to compile class for JSP: 
+
+JBWEB004060: An error occurred at line: 39 in the jsp file: /welcome.jsp
+System cannot be resolved
+36:             Date Time;
+37:             String Dtime;
+38:             hostName = InetAddress.getLocalHost().getHostName()+" with IP="+InetAddress.getLocalHost().getHostAddress()+" ";
+39:             serverName = System.getProperty("weblogic.Name");
+40:             Time = new Date();
+41:             Dtime = Time.toString();
+42:             %>
+
+
+Stacktrace:
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:95)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:198)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:455)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.Compiler.compile(Compiler.java:359)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:652)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:358)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:403)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.servlet.JspServlet.service(JspServlet.java:347)
+	at javax.servlet.api@2.0.0.Final-redhat-00001//javax.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//io.undertow.jsp.JspFileHandler.handleRequest(JspFileHandler.java:32)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:251)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.dispatchToPath(ServletInitialHandler.java:186)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.spec.RequestDispatcherImpl.forwardImpl(RequestDispatcherImpl.java:227)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.spec.RequestDispatcherImpl.forwardImplSetup(RequestDispatcherImpl.java:149)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.spec.RequestDispatcherImpl.forward(RequestDispatcherImpl.java:111)
+	at deployment.SampleWebApp1.war//com.middlewareinventory.SnoopServlet.processRequest(SnoopServlet.java:41)
+	at deployment.SampleWebApp1.war//com.middlewareinventory.SnoopServlet.doGet(SnoopServlet.java:63)
+	at javax.servlet.api@2.0.0.Final-redhat-00001//javax.servlet.http.HttpServlet.service(HttpServlet.java:503)
+	at javax.servlet.api@2.0.0.Final-redhat-00001//javax.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.security.SecurityContextAssociationHandler.handleRequest(SecurityContextAssociationHandler.java:78)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.security.handlers.NotificationReceiverHandler.handleRequest(NotificationReceiverHandler.java:50)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:68)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:269)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:78)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:133)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:130)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.security.SecurityContextThreadSetupAction.lambda$create$0(SecurityContextThreadSetupAction.java:105)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1530)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1530)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1530)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1530)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:249)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:78)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:99)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.Connectors.executeRootHandler(Connectors.java:387)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:841)
+	at org.jboss.threads@2.4.0.Final-redhat-00001//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final-redhat-00001//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final-redhat-00001//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final-redhat-00001//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at org.jboss.xnio@3.8.4.Final-redhat-00001//org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1280)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+2024-04-15 01:48:53,118 ERROR [io.undertow.request] (default task-1) UT005023: Exception handling request to /SampleWebApp1/welcome.jsp: org.apache.jasper.JasperException: JBWEB004062: Unable to compile class for JSP: 
+
+JBWEB004060: An error occurred at line: 39 in the jsp file: /welcome.jsp
+System cannot be resolved
+36:             Date Time;
+37:             String Dtime;
+38:             hostName = InetAddress.getLocalHost().getHostName()+" with IP="+InetAddress.getLocalHost().getHostAddress()+" ";
+39:             serverName = System.getProperty("weblogic.Name");
+40:             Time = new Date();
+41:             Dtime = Time.toString();
+42:             %>
+
+
+Stacktrace:
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:95)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:198)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:455)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.Compiler.compile(Compiler.java:359)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:652)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:358)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:403)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//org.apache.jasper.servlet.JspServlet.service(JspServlet.java:347)
+	at javax.servlet.api@2.0.0.Final-redhat-00001//javax.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.jsp@2.0.9.Final-redhat-00001//io.undertow.jsp.JspFileHandler.handleRequest(JspFileHandler.java:32)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:251)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.dispatchToPath(ServletInitialHandler.java:186)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.spec.RequestDispatcherImpl.forwardImpl(RequestDispatcherImpl.java:227)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.spec.RequestDispatcherImpl.forwardImplSetup(RequestDispatcherImpl.java:149)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.spec.RequestDispatcherImpl.forward(RequestDispatcherImpl.java:111)
+	at deployment.SampleWebApp1.war//com.middlewareinventory.SnoopServlet.processRequest(SnoopServlet.java:41)
+	at deployment.SampleWebApp1.war//com.middlewareinventory.SnoopServlet.doGet(SnoopServlet.java:63)
+	at javax.servlet.api@2.0.0.Final-redhat-00001//javax.servlet.http.HttpServlet.service(HttpServlet.java:503)
+	at javax.servlet.api@2.0.0.Final-redhat-00001//javax.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.security.SecurityContextAssociationHandler.handleRequest(SecurityContextAssociationHandler.java:78)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.security.handlers.NotificationReceiverHandler.handleRequest(NotificationReceiverHandler.java:50)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:68)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:269)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:78)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:133)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:130)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.security.SecurityContextThreadSetupAction.lambda$create$0(SecurityContextThreadSetupAction.java:105)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1530)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1530)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1530)
+	at org.wildfly.extension.undertow@7.4.0.GA-redhat-00005//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1530)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:249)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:78)
+	at io.undertow.servlet@2.2.5.Final-redhat-00001//io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:99)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.Connectors.executeRootHandler(Connectors.java:387)
+	at io.undertow.core@2.2.5.Final-redhat-00001//io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:841)
+	at org.jboss.threads@2.4.0.Final-redhat-00001//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final-redhat-00001//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final-redhat-00001//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final-redhat-00001//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at org.jboss.xnio@3.8.4.Final-redhat-00001//org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1280)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+2024-04-15 23:01:48,924 INFO  [org.jboss.as.server] (main) WFLYSRV0240: ProcessController has signalled to shut down; shutting down
+2024-04-15 23:01:54,088 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0272: Suspending server
+2024-04-15 23:01:54,090 INFO  [org.jboss.as.ejb3] (Thread-1) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2024-04-15 23:02:09,715 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-5) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+2024-04-15 23:02:09,716 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 291) WFLYUT0022: Unregistered web context: '/SampleWebApp1' from server 'default-server'
+2024-04-15 23:02:11,713 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0019: Host default-host stopping
+2024-04-15 23:02:11,714 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-8) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2024-04-15 23:02:11,714 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-5) WFLYJCA0119: Unbinding connection factory named java:/JmsXA to alias java:jboss/DefaultJMSConnectionFactory
+2024-04-15 23:02:11,714 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-8) WFLYJCA0011: Unbound Jakarta Connectors ConnectionFactory [java:/JmsXA]
+2024-04-15 23:02:11,715 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2024-04-15 23:02:11,740 INFO  [org.apache.activemq.artemis.ra] (ServerService Thread Pool -- 292) AMQ151003: resource adaptor stopped
+2024-04-15 23:02:11,942 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0028: Stopped deployment SampleWebApp1.war (runtime-name: SampleWebApp1.war) in 17845ms
+2024-04-15 23:02:12,901 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 291) WFLYCLINF0003: Stopped http-remoting-connector cache from ejb container
+2024-04-15 23:02:12,903 INFO  [org.infinispan.manager.DefaultCacheManager] (ServerService Thread Pool -- 291) Stopping cache manager null on null
+2024-04-15 23:02:13,277 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0028: Stopped deployment firstempty (runtime-name: firstempty) in 19178ms
+2024-04-15 23:02:13,277 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0008: Undertow HTTPS listener https suspending
+2024-04-15 23:02:13,278 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8443
+2024-04-15 23:02:14,799 ERROR [stderr] (activemq-buffer-timeout) Exception in thread "activemq-buffer-timeout" org.apache.activemq.artemis.api.core.ActiveMQInterruptedException: java.lang.InterruptedException
+2024-04-15 23:02:14,799 ERROR [stderr] (activemq-buffer-timeout) 	at org.apache.activemq.artemis.journal//org.apache.activemq.artemis.core.io.buffer.TimedBuffer$CheckTimer.run(TimedBuffer.java:484)
+2024-04-15 23:02:14,799 ERROR [stderr] (activemq-buffer-timeout) 	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-04-15 23:02:14,799 ERROR [stderr] (activemq-buffer-timeout) Caused by: java.lang.InterruptedException
+2024-04-15 23:02:14,799 ERROR [stderr] (activemq-buffer-timeout) 	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1048)
+2024-04-15 23:02:14,799 ERROR [stderr] (activemq-buffer-timeout) 	at java.base/java.util.concurrent.Semaphore.acquire(Semaphore.java:318)
+2024-04-15 23:02:14,800 ERROR [stderr] (activemq-buffer-timeout) 	at org.apache.activemq.artemis.journal//org.apache.activemq.artemis.core.io.buffer.TimedBuffer$CheckTimer.run(TimedBuffer.java:478)
+2024-04-15 23:02:14,800 ERROR [stderr] (activemq-buffer-timeout) 	... 1 more
+2024-04-15 23:02:15,101 INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 290) AMQ221002: Apache ActiveMQ Artemis Message Broker version 2.16.0.redhat-00022 [6018f059-f708-11ee-b629-005056b6c053] stopped, uptime 3 days 23 hours
+2024-04-15 23:02:15,102 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0008: Undertow HTTP listener default suspending
+2024-04-15 23:02:15,102 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+2024-04-15 23:02:15,102 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0004: Undertow 2.2.5.Final-redhat-00001 stopping
+2024-04-15 23:02:20,393 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0050: JBoss EAP 7.4.0.GA (WildFly Core 15.0.2.Final-redhat-00001) stopped in 26295ms

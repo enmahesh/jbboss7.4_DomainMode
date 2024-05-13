@@ -1,0 +1,30 @@
+2024-04-15 23:01:23,169 INFO  [org.jboss.as.server] (main) WFLYSRV0240: ProcessController has signalled to shut down; shutting down
+2024-04-15 23:01:42,824 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0272: Suspending server
+2024-04-15 23:01:42,826 INFO  [org.jboss.as.ejb3] (Thread-1) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2024-04-15 23:01:58,523 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-8) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+2024-04-15 23:01:58,524 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 370) WFLYUT0022: Unregistered web context: '/SampleWebApp1' from server 'default-server'
+2024-04-15 23:01:59,910 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0019: Host default-host stopping
+2024-04-15 23:01:59,910 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-7) WFLYJCA0119: Unbinding connection factory named java:/JmsXA to alias java:jboss/DefaultJMSConnectionFactory
+2024-04-15 23:01:59,910 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-5) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2024-04-15 23:01:59,911 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-7) WFLYJCA0011: Unbound Jakarta Connectors ConnectionFactory [java:/JmsXA]
+2024-04-15 23:02:00,263 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2024-04-15 23:02:00,848 INFO  [org.apache.activemq.artemis.ra] (ServerService Thread Pool -- 370) AMQ151003: resource adaptor stopped
+2024-04-15 23:02:11,329 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0028: Stopped deployment firstempty (runtime-name: firstempty) in 28493ms
+2024-04-15 23:02:11,329 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0008: Undertow HTTPS listener https suspending
+2024-04-15 23:02:11,329 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8643
+2024-04-15 23:02:12,167 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0028: Stopped deployment SampleWebApp1.war (runtime-name: SampleWebApp1.war) in 29332ms
+2024-04-15 23:02:12,901 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 371) WFLYCLINF0003: Stopped http-remoting-connector cache from ejb container
+2024-04-15 23:02:12,902 INFO  [org.infinispan.manager.DefaultCacheManager] (ServerService Thread Pool -- 371) Stopping cache manager null on null
+2024-04-15 23:02:13,272 ERROR [stderr] (activemq-buffer-timeout) Exception in thread "activemq-buffer-timeout" org.apache.activemq.artemis.api.core.ActiveMQInterruptedException: java.lang.InterruptedException
+2024-04-15 23:02:13,273 ERROR [stderr] (activemq-buffer-timeout) 	at org.apache.activemq.artemis.journal//org.apache.activemq.artemis.core.io.buffer.TimedBuffer$CheckTimer.run(TimedBuffer.java:484)
+2024-04-15 23:02:13,273 ERROR [stderr] (activemq-buffer-timeout) 	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-04-15 23:02:13,273 ERROR [stderr] (activemq-buffer-timeout) Caused by: java.lang.InterruptedException
+2024-04-15 23:02:13,273 ERROR [stderr] (activemq-buffer-timeout) 	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1048)
+2024-04-15 23:02:13,273 ERROR [stderr] (activemq-buffer-timeout) 	at java.base/java.util.concurrent.Semaphore.acquire(Semaphore.java:318)
+2024-04-15 23:02:13,273 ERROR [stderr] (activemq-buffer-timeout) 	at org.apache.activemq.artemis.journal//org.apache.activemq.artemis.core.io.buffer.TimedBuffer$CheckTimer.run(TimedBuffer.java:478)
+2024-04-15 23:02:13,273 ERROR [stderr] (activemq-buffer-timeout) 	... 1 more
+2024-04-15 23:02:14,254 INFO  [org.apache.activemq.artemis.core.server] (ServerService Thread Pool -- 368) AMQ221002: Apache ActiveMQ Artemis Message Broker version 2.16.0.redhat-00022 [41572383-f709-11ee-beaf-005056b6c053] stopped, uptime 3 days 23 hours
+2024-04-15 23:02:14,255 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0008: Undertow HTTP listener default suspending
+2024-04-15 23:02:14,255 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8280
+2024-04-15 23:02:14,256 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0004: Undertow 2.2.5.Final-redhat-00001 stopping
+2024-04-15 23:02:20,577 INFO  [org.jboss.as] (MSC service thread 1-4) WFLYSRV0050: JBoss EAP 7.4.0.GA (WildFly Core 15.0.2.Final-redhat-00001) stopped in 37741ms

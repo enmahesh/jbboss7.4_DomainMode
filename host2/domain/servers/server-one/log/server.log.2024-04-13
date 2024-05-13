@@ -1,0 +1,10 @@
+2024-04-13 23:18:43,685 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0027: Starting deployment of "firstempty" (runtime-name: "firstempty")
+2024-04-13 23:18:47,824 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 73) ISPN000128: Infinispan version: Red Hat Data Grid 'Infinispan 11.0.9.Final-redhat-00001' 8.1.1.GA
+2024-04-13 23:18:47,910 INFO  [org.infinispan.CONFIG] (MSC service thread 1-3) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2024-04-13 23:18:47,910 INFO  [org.infinispan.CONFIG] (MSC service thread 1-3) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2024-04-13 23:18:48,007 INFO  [org.infinispan.PERSISTENCE] (ServerService Thread Pool -- 73) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+2024-04-13 23:18:48,336 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 73) WFLYCLINF0002: Started http-remoting-connector cache from ejb container
+2024-04-13 23:18:48,657 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 21) WFLYSRV0010: Deployed "firstempty" (runtime-name : "firstempty")
+2024-04-13 23:55:29,982 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0027: Starting deployment of "SampleWebApp1.war" (runtime-name: "SampleWebApp1.war")
+2024-04-13 23:55:32,657 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 82) WFLYUT0021: Registered web context: '/SampleWebApp1' for server 'default-server'
+2024-04-13 23:55:32,730 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 21) WFLYSRV0010: Deployed "SampleWebApp1.war" (runtime-name : "SampleWebApp1.war")
